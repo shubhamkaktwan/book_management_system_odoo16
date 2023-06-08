@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="book_books_menu_id" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">book.books</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="book_history_menu_id" model="ir.actions.act_window">
+        <field name="name">Books_History</field>
+        <field name="res_model">book.history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+     <!--
+    <record id="book_category_menu_id" model="ir.actions.act_window">
+        <field name="name"> Books category </field>
+        <field name="res_model">book.category</field>
+        <field name="view_mode">tree,form</field>
+    </record> -->
+<!--    <record id="user_details_menu_id" model="ir.actions.act_window">-->
+<!--        <field name="name"> User Details </field>-->
+<!--        <field name="res_model">user.details</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+
+
+    <menuitem id="book_main_menu"
+              name="Books Management"
+              sequence="0"
+              groups="base.group_user"
+              action="book_books_menu_id"/>
+
+
+    <menuitem id="book_submenu1" name="Books" parent="book_main_menu" sequence="0" action="book_books_menu_id"/>
+     <menuitem id="book_submenu2" name="Book History" parent="book_main_menu" sequence="1" action="book_history_menu_id"/>
+   <!-- <menuitem id="book_submenu3" name="Book Category" parent="book_main_menu" sequence="1" action="book_category_menu_id"/> -->
+<!--    <menuitem id="book_submenu4" name="User details" parent="book_main_menu" sequence="1" action="user_details_menu_id"/>-->
+
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="book_books_tree_view">
+      <field name="name">book books list</field>
+      <field name="model">book.books</field>
+
+      <field name="arch" type="xml">
+        <tree >
+
+          <field name="book_id"/>
+          <field name="copies"/>
+          <field name="name"/>
+          <field name="author"/>
+          <field name="partner_id"/>
+          <field name="status"/>
+          <field name="available"/>
+
+
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="book_books_form_view">
+      <field name="name">book books form</field>
+      <field name="model">book.books</field>
+      <field name="arch" type="xml">
+        <form>
+         
+
+          <sheet>
+            <group>
+              <group>
+                    <field name="book_id"/>
+                    <field name="copies"/>
+                    <field name="name"/>
+                    <field name="author"/>
+                    <field name="partner_id"/>
+                    <field name="status"/>
+                    <field name="available"/>
+                    <field name="abc"/>
+                    
+              </group>
+              <group>
+                <field name="image" widget="image" class="oe_avatar"/>
+              </group>
+            </group>
+            <notebook>
+                <page string="Book History">
+              <group>
+                <field name="his_ids"/>
+              </group>
+            </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    </data>
+</odoo>

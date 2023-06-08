@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+      <record model="ir.ui.view" id="book_history_tree_view">
+      <field name="name">book history list</field>
+      <field name="model">book.history</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="starting_date"/>
+          <field name="ending_date"/>
+          <!-- <field name="author_id"/> -->
+          <!-- <field name="no_of_days"/> -->
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="book_history_form_view">
+      <field name="name">book history form</field>
+      <field name="model">book.history</field>
+      <field name="arch" type="xml">
+        <form>
+
+          <sheet>
+            <group>
+              <field name="starting_date"/>
+              <field name="ending_date"/>
+              <field name="his_id"/>
+              
+
+            
+              <field name="no_of_days"/>
+              <field name="efg"/>
+
+            </group>
+          </sheet>
+
+        </form>
+      </field>
+    </record>
+    </data>
+</odoo>
